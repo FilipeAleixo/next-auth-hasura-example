@@ -66,3 +66,7 @@ make migrate
 > track all tables and relationships
 
 Click `Track all` both for the tables and the relationships
+
+![image](https://user-images.githubusercontent.com/12476396/209340702-1b24018d-d597-41f5-b3d0-c203b9b5b524.png)
+![image](https://user-images.githubusercontent.com/12476396/209340886-4049cd14-8f82-4d65-9af4-727f169fc7e8.png)
+
