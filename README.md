@@ -61,5 +61,8 @@ docker volume rm name_of_your_volume
 ```sh
 # for your local or staging (not prod)
 make migrate
-make metadata
 ```
+
+> track all tables and relationships
+
+Click `Track all` both for the tables and the relationships
