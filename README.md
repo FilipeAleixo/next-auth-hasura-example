@@ -39,7 +39,7 @@ make console
 hasura migrate squash --name 'squash-given-name' --from '{your older timestamps folder}'
 ```
 
-> testing migrations
+> Testing migrations
 
 To test you newly created migrations what you can do is to reproduice a fresh install. To do so you can create a new repo and git clone this repo and copy your migrations but you will have to change the network Id and the db name inside your docker-compose.yaml, or you can delete your db without the need to create a new repo.
 
@@ -63,6 +63,26 @@ docker volume rm name_of_your_volume
 make migrate
 ```
 
-> track all tables and relationships
+> Track all tables and relationships
 
 Click `Track all` both for the tables and the relationships
+
+# Setting up front-end
+
+### Configure your local environment
+
+Copy the .env.local.example file in this directory to .env.local (which will be ignored by Git):
+
+```
+cp .env.local.example .env.local
+```
+
+Add details in .env.local.
+
+### Start the application
+
+To run your site locally, use:
+
+```
+npm run dev
+```
