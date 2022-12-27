@@ -16,3 +16,15 @@ array_relationships:
         table:
           schema: public
           name: sessions
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - email
+        - image
+        - name
+        - emailVerified
+        - id
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
