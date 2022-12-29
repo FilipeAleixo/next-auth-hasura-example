@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google"
 import { JWT } from "next-auth/jwt";
 import { HasuraAdapter } from "next-auth-hasura-adapter";
 import * as jsonwebtoken from "jsonwebtoken";
@@ -9,9 +9,9 @@ import * as jsonwebtoken from "jsonwebtoken";
 export default NextAuth({
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   adapter: HasuraAdapter({
@@ -19,7 +19,7 @@ export default NextAuth({
     adminSecret: process.env.HASURA_ADMIN_SECRET!,
   }),
   theme: {
-    colorScheme: "auto",
+    colorScheme: "light",
   },
   // Use JWT strategy so we can forward them to Hasura
   session: { strategy: "jwt" },
