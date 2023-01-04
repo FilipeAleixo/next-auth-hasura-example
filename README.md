@@ -59,13 +59,11 @@ docker volume rm name_of_your_volume
 > Hasura: use the hasura cli with the `Makefile`
 
 ```sh
-# for your local or staging (not prod)
-make migrate
+# Make the migrations
+make migrate-apply
+# Update the metadata
+make metadata-apply
 ```
-
-> Track all tables and relationships
-
-Click `Track all` both for the tables and the relationships
 
 # Setting up front-end
 
